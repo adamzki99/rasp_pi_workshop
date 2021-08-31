@@ -4,8 +4,8 @@ from time import sleep
 from datetime import datetime
 
 # These might be placed in a seperate "constants.py"
-_ledPin = 0
-_am2302Pin = 0
+_ledPin = 17
+_am2302Pin = 2
 
 humThreashold = 0
 tempThreashold = 0
