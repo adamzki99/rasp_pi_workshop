@@ -2,10 +2,11 @@ import RPi.GPIO as GPIO
 import adafruit_dht # Importing a library used for the DHT22 which is the same as our AM2302 
 from time import sleep
 from datetime import datetime
+from board import *
 
 # These might be placed in a seperate "constants.py"
 _ledPin = 17
-_am2302Pin = 2
+_am2302Pin = D2
 
 humThreashold = 0
 tempThreashold = 0
