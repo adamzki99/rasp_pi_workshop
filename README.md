@@ -1,4 +1,4 @@
-# rasp_pi_workshop
+# Raspberry Pi Workshop
 
 ## OS
 Download Link: https://downloads.raspberrypi.org/raspios_armhf/images/raspios_armhf-2021-05-28/2021-05-07-raspios-buster-armhf.zip
