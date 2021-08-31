@@ -35,9 +35,9 @@ def main():
             now = datetime.now()
             dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
             print("Warning: The temperature is high - ", dt_string)
-            GPIO.output(18,GPIO.HIGH)
+            GPIO.output(_ledPin,GPIO.HIGH)
             sleep(0.5)
-            GPIO.output(18,GPIO.LOW)
+            GPIO.output(_ledPin,GPIO.LOW)
              
 if __name__ == "__main__":
     main()
