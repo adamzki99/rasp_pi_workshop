@@ -5,4 +5,5 @@ Download Link: https://downloads.raspberrypi.org/raspios_armhf/images/raspios_ar
 
 ## Wiring
 ![Alt text](photos/wiring_schematic.png?raw=true "wiring_schematic.png")
+
 Wiring schematic for connecting the AM2302 and LED to the Raspberry Pi 
