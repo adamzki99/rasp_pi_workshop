@@ -1,5 +1,5 @@
 import RPi.GPIO as GPIO
-import Adafruit_DHT as dht # Importing a library used for the DHT22 which is the same as our AM2302 
+import adafruit_dht # Importing a library used for the DHT22 which is the same as our AM2302 
 from time import sleep
 from datetime import datetime
 
@@ -20,7 +20,10 @@ def main():
     
     while True:
         
-        h,t = dht.read_retry(dht.DHT22, _am2302Pin) # Reading the temperature (t) and humidity (h)
+        am2302 = adafruit_dht.DHT22(_am2302Pin, use_pulseio=False)
+
+        h = am2302.humidity
+        t = am2302.temperature
 
         if h > humThreashold:
             now = datetime.now()
