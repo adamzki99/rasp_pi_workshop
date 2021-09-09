@@ -31,6 +31,6 @@ cd && sudo apt install git && sudo apt install python3 && sudo apt install pytho
 
 ### Output
 
-- [ ] LED
+- [x] LED
 
 - [ ] Motor
