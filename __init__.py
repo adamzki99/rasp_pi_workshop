@@ -1,6 +1,7 @@
 import RPi.GPIO as GPIO
 import board
 import adafruit_dht # Importing a library used for the DHT22 which is the same as our AM2302 
+import botbook_mcp3002 as mcp # For MQ-2 smoke sensor
 
 _ledPin = 17
 _am2302Pin = board.D2
@@ -41,8 +42,9 @@ def readSensor(sensorType):
         
         return h
 
-    elif sensorType == "Gas":
-        return 0
+    elif sensorType == "Gas": # Seems like we need another chip (MCP 3002) to read the value
+        return mcp.readAnalog()
+
     elif sensorType == "Distance":
         return 0
     elif sensorType == "":
