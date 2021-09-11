@@ -21,7 +21,7 @@ cd && sudo apt install git && sudo apt install python3 && sudo apt install pytho
 
 - [x] AM2302       (Temperature + Humidity)
 
-- [ ] HC-SR501     (Motion Detection)
+- [x] HC-SR501     (Motion Detection)
 
 - [x] MQ-2         (Gas)
 

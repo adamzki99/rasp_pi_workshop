@@ -1,10 +1,11 @@
 import RPi.GPIO as GPIO
 import board
 import adafruit_dht # Importing a library used for the DHT22 which is the same as our AM2302 
-import botbook_mcp3002 as mcp # For MQ-2 smoke sensor
+#import botbook_mcp3002 as mcp # For MQ-2 smoke sensor
 
 _ledPin = 17
 _am2302Pin = board.D2
+_pirPin = 23
 
 def createConnection():
     while 1:
@@ -46,13 +47,15 @@ def readSensor(sensorType):
         return mcp.readAnalog()
 
     elif sensorType == "Distance":
-        return 0
+        return -1
+    elif sensorType == "PIR":
+        GPIO.setup(_pirPin, GPIO.IN)
+        motion = GPIO.input(_pirPin)
+        return motion
     elif sensorType == "":
-        return 0
+        return -1
     elif sensorType == "":
-        return 0
-    elif sensorType == "":
-        return 0
+        return -1
 
 def powerON(outputType):    
 
@@ -61,7 +64,7 @@ def powerON(outputType):
         GPIO.output(_ledPin, GPIO.LOW) # Turn on LED
 
     elif outputType == 'Motor':
-        return 0
+        return -1
 
 def powerOFF(outputType):
 
@@ -70,4 +73,4 @@ def powerOFF(outputType):
         GPIO.output(_ledPin, GPIO.HIGH) # Turn off LED
     
     elif outputType == 'Motor':
-        return 0
+        return -1
