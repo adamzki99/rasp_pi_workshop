@@ -23,7 +23,7 @@ cd && sudo apt install git && sudo apt install python3 && sudo apt install pytho
 
 - [ ] HC-SR501     (Motion Detection)
 
-- [ ] MQ-2         (Gas)
+- [x] MQ-2         (Gas)
 
 - [ ] Pulsmesser   (Heart Rate Monitor)
 
