@@ -1,5 +1,22 @@
 # Raspberry Pi Workshop
 
+## Workshop Description
+In this workshop we explore how easy it can be to collect data with a IoT-device. The workshop consist of three parts: Preperation, Action, Reaction.
+
+### Preperation
+The preperation of the workshop consist of a number of slides introducing the workshop takers into the concept of software and its importance in every day life.
+
+Slides (Swedish): https://docs.google.com/presentation/d/1fgE1r-J_mvLzIIb5ylbsFcqQjccgmlm5yWpsgbVMwvg/edit?usp=sharing
+
+### Action
+The action part of the workshop is a hardware setup and coding activity there the workshop takers connect a light emitting diode (LED) and Temprature/Humidity sensor to the Raspberry Pi. Then the workshop takers are ment to figure out how they can get relevant information form the sensor to use it as a condition to turn on and off the LED.
+
+### Reaction
+When the action part is done it is time to think about what the workshop takers have acchived while coding. Some questions to help discussion:
+- How do you think that digitalization will impact different fields of expertice?
+- How might the collection and digitalization of data help your every day life?
+- What other data might be interesting to collect?
+- Is there any danger of collecting data? Is there any need for regulations?
 
 ## Wiring
 ![Alt text](photos/wiring_schematic.png?raw=true "wiring_schematic.png")
@@ -23,7 +40,7 @@ cd && sudo apt install git && sudo apt full-upgrade && sudo apt install code && 
 
 - [x] HC-SR501     (Motion Detection)
 
-- [x] MQ-2         (Gas)
+- [ ] MQ-2         (Gas)
 
 - [ ] Pulsmesser   (Heart Rate Monitor)
 
