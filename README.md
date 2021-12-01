@@ -11,6 +11,29 @@ Slides (Swedish): https://docs.google.com/presentation/d/1fgE1r-J_mvLzIIb5ylbsFc
 ### Action
 The action part of the workshop is a hardware setup and coding activity there the workshop takers connect a light emitting diode (LED) and Temprature/Humidity sensor to the Raspberry Pi. Then the workshop takers are ment to figure out how they can get relevant information form the sensor to use it as a condition to turn on and off the LED.
 
+We start by setting up the LED together, making everyone comfortable with setting up hardware. 
+
+Then we go thru all the includes:
+
+```py
+from __init__ import * # we have built an abstraction layer so it is easier to use the intended hardware
+from __motor_controll__ import * # if someone wants to use a motor
+from time import sleep # used to make the LED blink
+```
+
+Then we must make a connectionbetween the hardware and software:
+
+```py
+createConnection()
+```
+
+Then we put everything in a infinit loop:
+
+```py
+while 1:
+  # code goes here
+```
+
 ### Reaction
 When the action part is done it is time to think about what the workshop takers have acchived while coding. Some questions to help discussion:
 - How do you think that digitalization will impact different fields of expertice?
