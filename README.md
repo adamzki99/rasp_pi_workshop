@@ -43,10 +43,9 @@ When the action part is done it is time to think about what the workshop takers 
 
 ## Wiring
 ![Alt text](photos/wiring_schematic.png?raw=true "wiring_schematic.png")
+Wiring schematic for connecting the AM2302 and LED to the Raspberry Pi 
 
 **Note:** Changes in the wiring, the LED shall be connected to pin 2. Also note that the short leg of the LED shall be on the same side as the resistor
-
-Wiring schematic for connecting the AM2302 and LED to the Raspberry Pi 
 
 ## OS
 Download Link: https://downloads.raspberrypi.org/raspios_armhf/images/raspios_armhf-2021-05-28/2021-05-07-raspios-buster-armhf.zip
