@@ -47,7 +47,7 @@ When the action part is done it is time to think about what the workshop takers 
 - What other data might be interesting to collect?
 - Is there any danger of collecting data? Is there any need for regulations?
 
-## Wiring
+## Wiring (Out of date)
 ![Alt text](photos/wiring_schematic.png?raw=true "wiring_schematic.png")
 Wiring schematic for connecting the AM2302 and LED to the Raspberry Pi 
 
