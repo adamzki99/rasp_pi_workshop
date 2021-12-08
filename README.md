@@ -1,5 +1,11 @@
 # Raspberry Pi Workshop
 
+## Improvements for next time
+- [] A clear description of what shall be acomplished with the building and programming part. This description will be given out in paper form to each group. The description includes wiring diagrams, all the availabe functions from the __init__.py file aswell as a description.
+- [] Better function names
+- [] New temp/humidity sensors
+
+
 ## Workshop Description
 In this workshop we explore how easy it can be to collect data with a IoT-device. The workshop consist of three parts: Preperation, Action, Reaction.
 
