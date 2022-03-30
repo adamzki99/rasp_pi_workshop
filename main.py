@@ -2,10 +2,25 @@ from time import sleep
 from __init__ import *
 from __motor_controll__ import *
 
-createConnection()
+'''
+List of available commands:
 
-while 1:
-    motorForward(0.25)
-    sleep(1)
-    motorReverse(0.25)
-    sleep(1)
+    read_sensor(sensor_type:str)
+        List of types:
+            Temperature
+            Humidity
+            Gas
+            Distance
+            PIR
+
+    led_on()
+
+    led_off()
+'''
+
+def main():
+
+    return 0
+if __name__ == "__main__":
+    create_connection()
+    main()
