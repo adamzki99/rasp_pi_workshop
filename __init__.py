@@ -7,8 +7,8 @@ _led_pin = 21
 _am2302_pin = board.D2
 _pir_pin = 8
 
-def create_connection():
-    while 1:
+def connect():
+    while True:
         try:
             GPIO.setmode(GPIO.BCM)
             GPIO.setwarnings(False)
@@ -17,43 +17,51 @@ def create_connection():
         except RuntimeError as error:
             print("Could not establish a connection to the Raspberry Pi")
 
-def read_sensor(sensor_type:str):
+def read_sensor_temperature():
+    """
+    Returns the temperature as [some unit]
+    """
+    t = 0
+    while t == 0:
+        try:
+            am2302 = adafruit_dht.DHT22(_am2302_pin, use_pulseio=False)
+            t = am2302.temperature
+        except RuntimeError as error:
+            continue
     
-    if sensor_type == 'Temperature':
-        t = 0
-        while t == 0:
-            try:
-                am2302 = adafruit_dht.DHT22(_am2302_pin, use_pulseio=False)
-                t = am2302.temperature
-            except RuntimeError as error:
-                continue
-        
-        return t
+    return t
 
-    elif sensor_type == 'Humidity':
-        h = 0
-        while h == 0:
-            try:
-                am2302 = adafruit_dht.DHT22(_am2302_pin, use_pulseio=False)
-                h = am2302.humidity
-            except RuntimeError as error:
-                continue
-        
-        return h
+def read_sensor_humidity():
+    """
+    Returns the humidity as [some unit]
+    """
+    h = 0
+    while h == 0:
+        try:
+            am2302 = adafruit_dht.DHT22(_am2302_pin, use_pulseio=False)
+            h = am2302.humidity
+        except RuntimeError as error:
+            continue
+    
+    return h
 
-    elif sensor_type == "Gas": # Seems like we need another chip (MCP 3002) to read the value
-        return mcp.readAnalog()
+def read_sensor_gas():
+    """
+    Returns the gas level as [some unit]
+    """
+    return mcp.readAnalog()
 
-    elif sensor_type == "Distance":
-        return -1
-    elif sensor_type == "PIR":
-        GPIO.setup(_pir_pin, GPIO.IN)
-        motion = GPIO.input(_pir_pin)
-        return motion
-    elif sensor_type == "":
-        return -1
-    elif sensor_type == "":
-        return -1
+def read_sensor_distance():
+    not_available = -1
+    return not_available
+
+def read_sensor_pir():
+    """
+    Returns motion as [some unit]
+    """
+    GPIO.setup(_pir_pin, GPIO.IN)
+    motion = GPIO.input(_pir_pin)
+    return motion
 
 def led_on():    
     GPIO.setup(_led_pin, GPIO.OUT)

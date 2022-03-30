@@ -1,16 +1,16 @@
 # Raspberry Pi Workshop
 
 ## Improvements for next time
-- [ ] A clear description of what shall be acomplished with the building and programming part. This description will be given out in paper form to each group. The description includes wiring diagrams, all the availabe functions from the __init__.py file aswell as a description.
+- [ ] A clear description of what shall be accomplished with the building and programming part. This description will be given out in paper form to each group. The description includes wiring diagrams, all the available functions from the __init__.py file aswell as a description.
 - [x] Better function names
 - [ ] New temp/humidity sensors
 
 
 ## Workshop Description
-In this workshop we explore how easy it can be to collect data with a IoT-device. The workshop consist of three parts: Preperation, Action, Reaction.
+In this workshop we explore how easy it can be to collect data with a IoT-device. The workshop consist of three parts: Preparation, Action, Reaction.
 
-### Preperation
-The preperation of the workshop consist of a number of slides introducing the workshop takers into the concept of software and its importance in every day life.
+### Preparation
+The preparation of the workshop consist of a number of slides introducing the workshop takers into the concept of software and its importance in every day life.
 
 Slides (Swedish): https://docs.google.com/presentation/d/1fgE1r-J_mvLzIIb5ylbsFcqQjccgmlm5yWpsgbVMwvg/edit?usp=sharing
 
@@ -18,7 +18,7 @@ Slides (Swedish): https://docs.google.com/presentation/d/1fgE1r-J_mvLzIIb5ylbsFc
 
 Document to be handed out: *TBD*
 
-The action part of the workshop is a hardware setup and coding activity there the workshop takers connect a light emitting diode (LED) and Temprature/Humidity sensor to the Raspberry Pi. Then the workshop takers are ment to figure out how they can get relevant information form the sensor to use it as a condition to turn on and off the LED.
+The action part of the workshop is a hardware setup and coding activity there the workshop takers connect a light emitting diode (LED) and Temperature/Humidity sensor to the Raspberry Pi. Then the workshop takers are meant to figure out how they can get relevant information form the sensor to use it as a condition to turn on and off the LED.
 
 We start by setting up the LED together, making everyone comfortable with setting up hardware. 
 
@@ -30,21 +30,21 @@ from __motor_controll__ import * # if someone wants to use a motor
 from time import sleep # used to make the LED blink
 ```
 
-Then we must make a connectionbetween the hardware and software:
+Then we must make a connection between the hardware and software:
 
 ```py
-createConnection()
+connect()
 ```
 
-Then we put everything in a infinit loop:
+Then we put everything in an infinite loop:
 
 ```py
-while 1:
-  # code goes here
+while True:
+  # your code goes here
 ```
 
 ### Reaction
-When the action part is done it is time to think about what the workshop takers have acchived while coding.
+When the action part is done it is time to think about what the workshop takers have achieved while coding.
 
 ## Wiring
 ![Alt text](wiring_schematic.png?raw=true "wiring_schematic.png")
