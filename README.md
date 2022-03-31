@@ -1,7 +1,7 @@
 # Raspberry Pi Workshop
 
 ## Improvements for next time
-- [ ] A clear description of what shall be accomplished with the building and programming part. This description will be given out in paper form to each group. The description includes wiring diagrams, all the available functions from the __init__.py file aswell as a description.
+- [x] A clear description of what shall be accomplished with the building and programming part. This description will be given out in paper form to each group. The description includes wiring diagrams, all the available functions from the __init__.py file aswell as a description.
 - [x] Better function names
 - [ ] New temp/humidity sensors
 
