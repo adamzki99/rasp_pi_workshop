@@ -16,32 +16,11 @@ Slides (Swedish): https://docs.google.com/presentation/d/1fgE1r-J_mvLzIIb5ylbsFc
 
 ### Action
 
-Document to be handed out: *TBD*
+Document to be handed out: https://github.com/adamzki99/rasp_pi_workshop/blob/main/instructions/instructions_v1.md
 
 The action part of the workshop is a hardware setup and coding activity there the workshop takers connect a light emitting diode (LED) and Temperature/Humidity sensor to the Raspberry Pi. Then the workshop takers are meant to figure out how they can get relevant information form the sensor to use it as a condition to turn on and off the LED.
 
 We start by setting up the LED together, making everyone comfortable with setting up hardware. 
-
-Then we go thru all the includes:
-
-```py
-from __init__ import * # we have built an abstraction layer so it is easier to use the intended hardware
-from __motor_controll__ import * # if someone wants to use a motor
-from time import sleep # used to make the LED blink
-```
-
-Then we must make a connection between the hardware and software:
-
-```py
-connect()
-```
-
-Then we put everything in an infinite loop:
-
-```py
-while True:
-  # your code goes here
-```
 
 ### Reaction
 When the action part is done it is time to think about what the workshop takers have achieved while coding.
