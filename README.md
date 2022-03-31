@@ -49,7 +49,6 @@ cd Documents/ && \\
 git clone https://github.com/adamzki99/rasp_pi_workshop && \\ 
 cd rasp_pi_workshop/ && \\
 printf "\n\n\nEverything setup... Starting example.py\n\n\n" && \\
-python3 example.py
 ```
 
 ## Code
