@@ -32,7 +32,7 @@ Wiring schematic for connecting the AM2302(DHT22) and LED to the Raspberry Pi
 ## OS
 Download Link: https://downloads.raspberrypi.org/raspios_armhf/images/raspios_armhf-2021-05-28/2021-05-07-raspios-buster-armhf.zip
 
-Setup command, just paste in terminal and run. (NOTE: Program may fail to run if the hardware is not setup)
+Setup command, just paste in terminal and run.
 
 ```batch
 sudo apt install git && \\
