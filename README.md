@@ -26,7 +26,7 @@ We start by setting up the LED together, making everyone comfortable with settin
 When the action part is done it is time to think about what the workshop takers have achieved while coding.
 
 ## Wiring
-![Alt text](wiring_schematic.png?raw=true "wiring_schematic.png")
+![wiring_schematic.jpg](https://github.com/adamzki99/rasp_pi_workshop/blob/main/images/wiring_schematic.jpg)
 Wiring schematic for connecting the AM2302(DHT22) and LED to the Raspberry Pi 
 
 ## OS
