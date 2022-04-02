@@ -1,11 +1,11 @@
 import RPi.GPIO as GPIO
-import board
-import adafruit_dht # Importing a library used for the DHT22 which is the same as our AM2302 
+import Adafruit_DHT # Importing a library used for the DHT22 which is the same as our AM2302 
 #import botbook_mcp3002 as mcp # For MQ-2 smoke sensor
 
-_led_pin = 21
-_am2302_pin = board.D2
-_pir_pin = 8
+LED_PIN = 21
+AM2302_PIN = 2
+PIR_PIN = 8
+DHT_SENSOR = Adafruit_DHT.DHT22
 
 def connect():
     while True:
@@ -19,37 +19,29 @@ def connect():
 
 def read_sensor_temperature():
     """
-    Returns the temperature as [some unit]
+    Returns the temperature as celsius
     """
-    t = 0
-    while t == 0:
-        try:
-            am2302 = adafruit_dht.DHT22(_am2302_pin, use_pulseio=False)
-            t = am2302.temperature
-        except RuntimeError as error:
-            continue
+    temperature = 0
     
-    return t
+    temperature = Adafruit_DHT.read_retry(DHT_SENSOR, AM2302_PIN)()[1]
+    
+    return temperature
 
 def read_sensor_humidity():
     """
-    Returns the humidity as [some unit]
+    Returns the humidity as relative humidity
     """
-    h = 0
-    while h == 0:
-        try:
-            am2302 = adafruit_dht.DHT22(_am2302_pin, use_pulseio=False)
-            h = am2302.humidity
-        except RuntimeError as error:
-            continue
+    humidity = 0
     
-    return h
+    humidity = Adafruit_DHT.read_retry(DHT_SENSOR, AM2302_PIN)()[0]
+    
+    return humidity
 
 def read_sensor_gas():
     """
     Returns the gas level as [some unit]
     """
-    return mcp.readAnalog()
+    return -1 #mcp.readAnalog()
 
 def read_sensor_distance():
     not_available = -1
@@ -59,15 +51,15 @@ def read_sensor_pir():
     """
     Returns motion as [some unit]
     """
-    GPIO.setup(_pir_pin, GPIO.IN)
-    motion = GPIO.input(_pir_pin)
+    GPIO.setup(PIR_PIN, GPIO.IN)
+    motion = GPIO.input(PIR_PIN)
     return motion
 
 def led_on():    
-    GPIO.setup(_led_pin, GPIO.OUT)
-    GPIO.output(_led_pin, GPIO.LOW) # Turn on LED
+    GPIO.setup(LED_PIN, GPIO.OUT)
+    GPIO.output(LED_PIN, GPIO.LOW) # Turn on LED
 
 
 def led_off():
-    GPIO.setup(_led_pin, GPIO.OUT)
-    GPIO.output(_led_pin, GPIO.HIGH) # Turn off LED
+    GPIO.setup(LED_PIN, GPIO.OUT)
+    GPIO.output(LED_PIN, GPIO.HIGH) # Turn off LED
