@@ -7,6 +7,8 @@ AM2302_PIN = 2
 PIR_PIN = 8
 DHT_SENSOR = Adafruit_DHT.DHT22
 
+GPIO.setwarnings(False)
+
 def connect():
     while True:
         try:
