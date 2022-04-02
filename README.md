@@ -34,21 +34,8 @@ Download Link: https://downloads.raspberrypi.org/raspios_armhf/images/raspios_ar
 
 Setup command, just paste in terminal and run.
 
-```batch
-sudo apt install git && \\
-sudo apt full-upgrade && \\
-sudo apt install code && \\
-sudo apt install python3 && \\
-sudo apt install python3-pip && \\
-sudo python3 -m pip install --upgrade pip setuptools wheel && \\
-sudo pip3 install --install-option="--force-pi" Adafruit_DHT && \\
-python3 -m pip install -U --user pip gpiod && \\
-sudo apt install libgpiod2 && \\
-sudo apt autoremove && \\
-cd Documents/ && \\
-git clone https://github.com/adamzki99/rasp_pi_workshop && \\ 
-cd rasp_pi_workshop/ && \\
-printf "\n\n\nEverything setup... Starting example.py\n\n\n" && \\
+```shell
+sudo install_workshop_dependencies.sh
 ```
 
 ## Code
