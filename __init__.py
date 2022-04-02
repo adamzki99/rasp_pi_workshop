@@ -25,7 +25,7 @@ def read_sensor_temperature():
     """
     temperature = 0
     
-    temperature = Adafruit_DHT.read_retry(DHT_SENSOR, AM2302_PIN)()[1]
+    temperature = Adafruit_DHT.read_retry(DHT_SENSOR, AM2302_PIN)[1]
     
     return temperature
 
@@ -35,7 +35,7 @@ def read_sensor_humidity():
     """
     humidity = 0
     
-    humidity = Adafruit_DHT.read_retry(DHT_SENSOR, AM2302_PIN)()[0]
+    humidity = Adafruit_DHT.read_retry(DHT_SENSOR, AM2302_PIN)[0]
     
     return humidity
 
