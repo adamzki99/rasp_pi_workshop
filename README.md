@@ -1,9 +1,8 @@
 # Raspberry Pi Workshop
 
 ## Improvements for next time
-- [x] A clear description of what shall be accomplished with the building and programming part. This description will be given out in paper form to each group. The description includes wiring diagrams, all the available functions from the __init__.py file aswell as a description.
-- [x] Better function names
-- [ ] New temp/humidity sensors
+- [ ] Two seperate scripts, one for "apt install"-stuff and one for "pip3 install"-stuff
+- [ ] New temp/humidity sensors with a integrated resistor: https://www.amazon.se/AZDelivery-Temperatursensor-Fuktgivare-Kretskort-kompatibel/dp/B078SVZB1X/ref=sr_1_7?crid=2DRKBQSXON1U6&keywords=DHT22&qid=1649316053&sprefix=dht22%2Caps%2C87&sr=8-7
 
 
 ## Workshop Description
