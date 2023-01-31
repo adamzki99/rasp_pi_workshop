@@ -1,11 +1,11 @@
 import RPi.GPIO as GPIO
-import Adafruit_DHT # Importing a library used for the DHT22 which is the same as our AM2302 
+import adafruit_dht # Importing a library used for the DHT22 which is the same as our AM2302 
 #import botbook_mcp3002 as mcp # For MQ-2 smoke sensor
 
 LED_PIN = 21
 AM2302_PIN = 2
 PIR_PIN = 8
-DHT_SENSOR = Adafruit_DHT.DHT22
+DHT_SENSOR = adafruit_dht.DHT22(AM2302_PIN)
 
 GPIO.setwarnings(False)
 
@@ -25,7 +25,12 @@ def read_sensor_temperature():
     """
     temperature = 0
     
-    temperature = Adafruit_DHT.read_retry(DHT_SENSOR, AM2302_PIN)[1]
+    try:
+        temperature = DHT_SENSOR.temperature
+    except:
+        temperature = -1
+    if temperature == None:
+        temperature = -1
     
     return temperature
 
@@ -34,8 +39,13 @@ def read_sensor_humidity():
     Returns the humidity as relative humidity
     """
     humidity = 0
-    
-    humidity = Adafruit_DHT.read_retry(DHT_SENSOR, AM2302_PIN)[0]
+
+    try:
+        humidity = DHT_SENSOR.humidity
+    except:
+        humidity = -1
+    if humidity == None:
+        humidity = -1
     
     return humidity
 

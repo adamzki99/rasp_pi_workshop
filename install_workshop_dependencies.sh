@@ -6,7 +6,8 @@ sudo apt install python3
 sudo apt-get install python3-dev python3-pip
 sudo python3 -m pip install --upgrade pip setuptools wheel
 sudo pip3 install --install-option="--force-pi" Adafruit_DHT
-sudo pip3 install Adafruit_Python_DHT
+sudo pip3 install adafruit-circuitpython-lis3dh
+sudo pip3 install adafruit-circuitpython-dht
 python3 -m pip install -U --user pip gpiod
 sudo apt install libgpiod2
 sudo apt autoremove
