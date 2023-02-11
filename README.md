@@ -24,14 +24,15 @@ Document to be handed out: https://github.com/adamzki99/rasp_pi_workshop/blob/ma
 
 The action part of the workshop is a hardware setup and coding activity there the workshop takers connect a light emitting diode (LED) and Temperature/Humidity sensor to the Raspberry Pi. Then the workshop takers are meant to figure out how they can get relevant information form the sensor to use it as a condition to turn on and off the LED.
 
-We start by setting up the LED together, making everyone comfortable with setting up hardware. 
+We start by setting up the LED together, making everyone comfortable with setting up hardware.
 
 ### Reaction
 When the action part is done it is time to think about what the workshop takers have achieved while coding.
 
 ## Wiring
-![wiring_schematic.jpg](https://github.com/adamzki99/rasp_pi_workshop/blob/main/images/wiring_schematic.jpg)
-Wiring schematic for connecting the AM2302(DHT22) and LED to the Raspberry Pi 
+![wiring schematic](images/wiring_schematic.png)
+
+Wiring schematic for connecting the AM2302(DHT22) and LED to the Raspberry Pi
 
 ## OS
 Download Link: https://downloads.raspberrypi.org/raspios_armhf/images/raspios_armhf-2021-05-28/2021-05-07-raspios-buster-armhf.zip
