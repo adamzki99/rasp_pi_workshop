@@ -9,7 +9,7 @@ List of available commands:
     read_sensor_humidity()
     read_sensor_gas()
     read_sensor_distance()
-    read_sensor_pir()
+    read_sensor_motion()
 
     led_on()
     led_off()
