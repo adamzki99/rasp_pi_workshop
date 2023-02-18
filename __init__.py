@@ -59,7 +59,7 @@ def read_sensor_distance():
     not_available = -1
     return not_available
 
-def read_sensor_pir():
+def read_sensor_motion():
     """
     Returns motion as [some unit]
     """
