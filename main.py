@@ -6,6 +6,7 @@ from __motor_controll__ import *
 List of available commands:
 
     print("This is my message")
+    count()
     sleep(5)
 
     led_on()
