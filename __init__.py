@@ -49,16 +49,6 @@ def read_sensor_humidity():
     
     return humidity
 
-def read_sensor_gas():
-    """
-    Returns the gas level as [some unit]
-    """
-    return -1 #mcp.readAnalog()
-
-def read_sensor_distance():
-    not_available = -1
-    return not_available
-
 def read_sensor_motion():
     """
     Returns motion as [some unit]
@@ -75,3 +65,17 @@ def led_on():
 def led_off():
     GPIO.setup(LED_PIN, GPIO.OUT)
     GPIO.output(LED_PIN, GPIO.HIGH) # Turn off LED
+
+# def read_sensor_gas():
+#     """
+#     Returns the gas level as [some unit]
+#     """
+#     not_available = -1
+#     return not_available
+
+# def read_sensor_distance():
+#     """
+#     Returns the distance as [some unit]
+#     """
+#     not_available = -1
+#     return not_available
