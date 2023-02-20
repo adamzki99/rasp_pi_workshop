@@ -4,7 +4,7 @@ import adafruit_dht # Importing a library used for the DHT22 which is the same a
 
 LED_PIN = 21
 AM2302_PIN = 2
-PIR_PIN = 8
+PIR_MOTION_PIN = 8
 DHT_SENSOR = adafruit_dht.DHT22(AM2302_PIN)
 
 GPIO.setwarnings(False)
@@ -51,10 +51,10 @@ def read_sensor_humidity():
 
 def read_sensor_motion():
     """
-    Returns motion as [some unit]
+    Returns motion as True for ~1 second
     """
-    GPIO.setup(PIR_PIN, GPIO.IN)
-    motion = GPIO.input(PIR_PIN)
+    GPIO.setup(PIR_MOTION_PIN, GPIO.IN)
+    motion = GPIO.input(PIR_MOTION_PIN)
     return motion
 
 def led_on():    
