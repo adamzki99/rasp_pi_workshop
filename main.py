@@ -5,14 +5,15 @@ from __motor_controll__ import *
 '''
 List of available commands:
 
-    read_sensor_temperature()
-    read_sensor_humidity()
-    read_sensor_gas()
-    read_sensor_distance()
-    read_sensor_motion()
+    print("*text*")
+    sleep(*seconds*)
 
     led_on()
     led_off()
+
+    read_sensor_temperature()
+    read_sensor_humidity()
+    read_sensor_motion()
 '''
 
 def main():
