@@ -65,17 +65,4 @@ def led_on():
 def led_off():
     GPIO.setup(LED_PIN, GPIO.OUT)
     GPIO.output(LED_PIN, GPIO.HIGH) # Turn off LED
-
-# def read_sensor_gas():
-#     """
-#     Returns the gas level as [some unit]
-#     """
-#     not_available = -1
-#     return not_available
-
-# def read_sensor_distance():
-#     """
-#     Returns the distance as [some unit]
-#     """
-#     not_available = -1
-#     return not_available
+    

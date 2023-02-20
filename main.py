@@ -5,8 +5,8 @@ from __motor_controll__ import *
 '''
 List of available commands:
 
-    print("*text*")
-    sleep(*seconds*)
+    print("This is my message")
+    sleep(5)
 
     led_on()
     led_off()
