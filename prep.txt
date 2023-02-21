@@ -1,15 +1,24 @@
-first make a git pull
-run install workshop dependencies script
-prepare 5 red, 3 blue and 7 white wires with one led, resistor, humidity sensor and breadboard
-build a control breadboard to test all raspberry pi stations (both before and potentially during the workshop)
-copy this code into main.py and run to test if everything works
-
+- First make a $ git pull
+- Run $ ./install_workshop_dependencies.sh
+- Prepare: 
+    - 1 breadboard
+    - 15 wires
+        - 5 red
+        - 3 blue
+        - 7 white
+    - 1 LED lamp
+    - 1 resistor
+    - 1 humidity sensor
+    - 1 motion sensor
+- Assemble the breadboard according to the schematics, this will act as a control unit.
+    The control unit will be used on all workstations both before and during the workshop (in case of debugging)
+- Copy the code below into main.py to run and test if everything works
 
 def main():
     # Your code goes here
     print("Testing workshop")
     c = 0
-    while c < 5:
+    while c <= 3:
         c = count()
         print(c)
 
