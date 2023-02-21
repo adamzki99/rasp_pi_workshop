@@ -35,12 +35,22 @@ One of the best and most useful features of software is that you can change it! 
 
 ## Task 2: Good at counting
 
-Create a loop
-add `print(count())`
+The second most powerful feature of software is repition, which makes computers great at counting. We will build a new section under your `print()` command called a "while loop" in python.
+Create a new line under your `print()` and type `while True:` and then enter for a new line.
+Great! Everything on this new line will now be repeated, but how do we check if it repeats? We make the computer print changes over time. 
+
+We have a `count()` command telling the computer to count for us, and we can combine `print()` and `count()` to make the computer tell us how many times it have counted.
+On the new line we created, type `print(count())` and then run the code with F5. If you see a number rapidly increasing its value, then you can go to the next task.
 
 ## Task 3: Counting seconds
 
-Add `sleep(1)`
+Told you that computers are good at counting, look how fast it goes! Maybe a bit too fast...
+As of now, counting as fast as possible won't be useful for us, let us make the computer count seconds instead so that we can track the time!
+
+First however, we need to tell the computer to stop counting, we can force it to stop by pressing the red square that have appeared in the top middle of the screen, you can also hold down shift and press F5 to stop the program, or you can ask your guide for help.
+
+How do we make the program count seconds? The easiest way would be to tell the computer to wait one second between counting. With python, we can do exactly that! We can make the program wait by using the `sleep()` command.
+Let's add a new line underneath `print(count())` and type `sleep(1)`. Now our program will display the count, then wait a second, then loop back to count again!
 
 ## Task 4: Turn on the light
 
