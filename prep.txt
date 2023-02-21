@@ -19,7 +19,7 @@ def main():
     print("Testing workshop")
     c = 0
     while c <= 3:
-        c = count()
+        c += 1
         print(c)
 
     c = 0
