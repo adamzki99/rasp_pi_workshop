@@ -1,0 +1,16 @@
+- First make a $ git pull
+- Run $ ./prep/install_workshop_dependencies.sh
+- Prepare for each station: 
+    - 1 breadboard
+    - 15 wires
+        - 5 red
+        - 3 blue
+        - 7 white
+    - 1 LED lamp
+    - 1 resistor
+    - 1 humidity sensor
+    - 1 motion sensor
+- Assemble the breadboard according to the schematics, this will act as a control unit.
+    The control unit will be used on all workstations both before and during the workshop (in case of debugging)
+- Run $ ./prep/test.sh
+    Control that everything works.
