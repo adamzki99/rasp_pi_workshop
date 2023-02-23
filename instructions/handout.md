@@ -25,7 +25,7 @@ Why Python? Python has become one of the most popular programming languages in t
 
 Before we begin, I want you to take a look on what you can see in the other document. 
 You have a section called `List of available commands` where you can see what our software is capable of.
-Underneeth is a section called `def main()`, this is where we will write all our code for this workshop.
+Underneeth is a section called `def main()`, this is where we will write all your code for this workshop.
 
 The program that most developers begin with is "Hello World". In Python, this is a piece of cake! In the section `def main()` you use the command `print()` to get an output from your program. Between the parentheses, you write "Hello World" in citation notations, now you can execute the program by pressing the F5 key on your keyboard and see that the Raspberry Pi displays "Hello World" on the screen.
 
@@ -54,20 +54,16 @@ Let's add a new line underneath `print(count())` and type `sleep(1)`. Now our pr
 
 ## Task 4: Turn on the light
 
-Refer to wiring schematic
-Make led turn on after 1 second
+Now we are going to build a lamp!
+Below you will find an image on how to wire the light to the circuitboard.
+After you have build the lamp, use the `led_on()` command to turn on the LED light in our code.
+
+![wiring schematic led](../images/wiring_schematic_only_led.png)
 
 ## Task 5: Make a light show
 
-Using the command `led_on()` and `led_off()` you can control the LED that is plugged in to the Raspberry Pi.
-
-By using the command `while True:` we can make program run forever. and by using the command `sleep(0.5)` we can make the program wait for 0.5 second.
-
-By using the commands mentioned above, make the LED blink.
-
-If you did not wired everything you can start by just connecting the red LED to the Raspberry Pi.
-
-![wiring schematic led](../images/wiring_schematic_only_led.png)
+Good job! You have now successfully connected the LED to the computer. We can now control it and make a light show. Use the command `led_on()`, `led_off()` and `sleep()` to make the LED light blink.
+If you like faster light shows, you can try using `slep(0.5)`. Or if you like slower ones, try increasing the amount of seconds the computer should wait.
 
 ## Task 6: What is the humidity?
 
