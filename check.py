@@ -1,3 +1,7 @@
+from time import sleep
+from __init__ import *
+from __motor_controll__ import *
+
 def main():
     print("Testing workshop")
     c = 0
@@ -27,3 +31,7 @@ def main():
         print(f"Motion: {string}")
         c += 1
         sleep(1)
+    return 0
+if __name__ == "__main__":
+    connect()
+    main()
