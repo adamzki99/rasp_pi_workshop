@@ -8,7 +8,7 @@
         - 7 white
     - 1 LED lamp
     - 1 resistor
-    - 1 humidity sensor
+    - 1 humidity/temperature sensor
 - Assemble the breadboard according to the schematics, this will act as a control unit.
     The control unit will be used on all workstations both before and during the workshop (in case of debugging)
 - Run $ ./check.py
