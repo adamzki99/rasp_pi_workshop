@@ -1,64 +1,61 @@
 # Raspberry Pi Workshop
 
-## Until next time
-### From 7 April 2022
-- [ ] Two seperate scripts, one for "apt install"-stuff and one for "pip3 install"-stuff
-- [ ] Update and fix all errors in the wiring schematic
-- [x] The current library for the temp/humidity sensor do not work, this needs to be chaged and tested that it works with the Raspberry Pi 4
-- [x] Better instructions: Add that there is a wiring schematic for the LED and sensor, as well as instructions on how to run the python code
-### From 8 December 2022
-- [ ] New temp/humidity sensors with a integrated resistor: https://www.amazon.se/AZDelivery-Temperatursensor-Fuktgivare-Kretskort-kompatibel/dp/B078SVZB1X/ref=sr_1_7?crid=2DRKBQSXON1U6&keywords=DHT22&qid=1649316053&sprefix=dht22%2Caps%2C87&sr=8-7
-
-
 ## Workshop Description
-In this workshop we explore how easy it can be to collect data with a IoT-device. The workshop consist of three parts: Preparation, Action, Reaction.
 
-### Preparation
-The preparation of the workshop consist of a number of slides introducing the workshop takers into the concept of software and its importance in every day life.
+In this workshop, students shall explore how easy it can be to work with an IoT device.
+This workshop consists of three parts:
+an introduction to software engineering,
+a hands-on experience with Raspberry PIs,
+and a reflection part.
 
-Slides (Swedish): https://docs.google.com/presentation/d/1fgE1r-J_mvLzIIb5ylbsFcqQjccgmlm5yWpsgbVMwvg/edit?usp=sharing
+### Introduction to Software Engineering
 
-### Action
+The workshop begins with an introduction on the impact of software on our everyday life and the importance of software engineering.
 
-Document to be handed out: https://github.com/adamzki99/rasp_pi_workshop/blob/main/instructions/instructions_v1.md
+The Swedish slides are available here: [Google Spreadsheet](https://docs.google.com/presentation/d/1fgE1r-J_mvLzIIb5ylbsFcqQjccgmlm5yWpsgbVMwvg/edit?usp=sharing)
 
-The action part of the workshop is a hardware setup and coding activity there the workshop takers connect a light emitting diode (LED) and Temperature/Humidity sensor to the Raspberry Pi. Then the workshop takers are meant to figure out how they can get relevant information form the sensor to use it as a condition to turn on and off the LED.
+### Hands-on experience
 
-We start by setting up the LED together, making everyone comfortable with setting up hardware.
+The handout document for students can be found here: [instructions/handout.md](instructions/handout.md)
 
-### Reaction
-When the action part is done it is time to think about what the workshop takers have achieved while coding.
+During this hands-on experience, students follow the handout's instructions and start with a simple `print("something")` statement to understand how to run the code.
+In further steps, they learn how to read sensor data and control the code with conditional statements (if).
 
-## Wiring
+### Reflection
+
+After the hands-on coding experience, the workshop organizer shall ask the students about their experience and understanding of software systems.
+
+## Wiring schematic
+
 ![wiring schematic](images/wiring_schematic.png)
 
-Wiring schematic for connecting the AM2302(DHT22) and LED to the Raspberry Pi
+## Preparation (for workshop organizer)
 
-## OS
-Download Link: https://downloads.raspberrypi.org/raspios_armhf/images/raspios_armhf-2021-05-28/2021-05-07-raspios-buster-armhf.zip
+### Setup Raspberry Pi
 
-Setup command, just paste in terminal and run.
+1. Download the [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
+2. Flash the latest version of Raspberry PI OS (with a desktop environment) on a SD-card using the Raspberry Pi Imager
+3. Setup a wireless network so that the Pi can connect to the internet
+4. Clone this repository on the Pi
+5. Run `sudo install_workshop_dependencies.sh` inside of the cloned repository directory to install all Linux dependencies
 
-```shell
-sudo install_workshop_dependencies.sh
-```
+## Bill of Materials (BOM)
 
-## Code
+IoT platform
 
-### Input
+- 1x Raspberry Pi 4
+- 1x Breadboard
+- Jumper wires in different colors (female to male)
 
-- [x] AM2302       (Temperature + Humidity)
+Sensors
 
-- [x] HC-SR501     (Motion Detection)
+- 1x AM2302 (Temperature + Humidity)
 
-- [ ] MQ-2         (Gas)
+Signals
 
-- [ ] Pulsmesser   (Heart Rate Monitor)
+- 1x LED
+- 1x 330 Ω (ohm) resistor for the LED
 
-- [ ] Sharp 2Y0A02 (Distance)
+## Check setup
 
-### Output
-
-- [x] LED
-
-- [x] Motor
+After the Raspberry Pi is setup and all components are wired on the breadboard you can run `python check.py` to check the whole setup.
