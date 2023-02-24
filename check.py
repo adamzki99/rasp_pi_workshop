@@ -6,7 +6,7 @@ def main():
     print("Testing workshop")
     c = 0
     while c <= 3:
-        c += 1
+        c = count()
         print(c)
 
     c = 0
