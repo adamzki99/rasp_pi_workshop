@@ -57,6 +57,7 @@ Let's add a new line underneath `print(count())` and type `sleep(1)`. Now our pr
 Now we are going to build a lamp!
 Below you will find an image on how to wire the light to the circuitboard.
 After you have build the lamp, use the `led_on()` command to turn on the LED light in our code.
+(The lamp is directional, meaning that the orientation of the lamp matters. If your lamp doesn't light up, try rotating it)
 
 ![wiring schematic led](../images/wiring_schematic_only_led.png)
 
@@ -65,20 +66,24 @@ After you have build the lamp, use the `led_on()` command to turn on the LED lig
 Good job! You have now successfully connected the LED to the computer. We can now control it and make a light show. Use the command `led_on()`, `led_off()` and `sleep()` to make the LED light blink.
 If you like faster light shows, you can try using `slep(0.5)`. Or if you like slower ones, try increasing the amount of seconds the computer should wait.
 
-## Task 6: What is the humidity?
+## Task 6: Read the room
 
-Refer to wiring schematic
-print humidity
-
-## Task 7: It's getting humid in here
-
-Besides the song "Hot In Herre" by Nelly, it feels like the temperature is getting hotter with the Raspberry Pi, and your brain of yours working to complete the tasks. By using the `read_sensor_temperature()` and `read_sensor_humidity()` we can get the temperature and humidity of the surroundings into our program.
-
-Python supports an "if" statement which allows the programmer to ask questions to the system. A statement like the following asks the program if the temperature in the room is lower than 1-degree Celsius: `if read_sensor_temperature() < 1:`.
-
-Now, have the program turn on the LED if the temperature is higher than value X and turn it off if it is lower than value X. You can choose the value of X as you like.
+Now we are going to connect the humidity and temperature sensor to the computer.
+Just like last time, there is an image over the wires below for you to follow.
+When assembled, you can get the sensor's readings with `read_sensor_temperature()` and `read_sensor_humidity()`, then we can combine them with `print()` just like we did with the `count()` command!
+(The sensor sometimes fails to read the humidity and temperature, it will then report "-1" as an error message. If the sensor reports "-1" for over 5 seconds, then it could be that the sensor is not plugged in correctly)
 
 ![wiring schematic](../images/wiring_schematic.png)
+
+## Task 7: Sauna detector
+
+Good job! The computer can now read the room and report the temperature and humidity of where the Raspberry Pi is. We are now going to make the LED lamp light up if either the humidity or temperature is too high. A sauna detector essentially. 
+
+Python supports an "if" statement which allows the programmer to ask questions to the system. A statement like the following asks the program if the temperature in the room is higher than 8 degree Celsius: `if read_sensor_temperature() > 8:`. This could be used to detect if your fridge door is left open for example.
+
+Now, have the program turn on the LED if the humidity is higher than value X and turn it off if it is lower than value X. You can choose the value of X as you like.
+
+When you are done, start the program and test it to see if the LED turns on if it gets too humid or too warm. Unfortunetely, we don't have a sauna on campus (yet), so we need to use something else that produces humid warm air for the sensor to read. How about you?
 
 ## Task Bonus: To the great beyond
 
