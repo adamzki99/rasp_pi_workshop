@@ -2,10 +2,11 @@
 - Run $ ./install_workshop_dependencies.sh
 - Prepare for each station: 
     - 1 breadboard
-    - 15 wires
-        - 5 red
-        - 3 blue
-        - 7 white
+    - 7 wires
+        - 3 red
+        - 2 blue
+        - 1 yellow
+        - 1 green
     - 1 LED lamp
     - 1 resistor
     - 1 humidity sensor
