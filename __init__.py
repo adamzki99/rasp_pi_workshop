@@ -55,18 +55,9 @@ def read_sensor_humidity():
     
     return humidity
 
-def read_sensor_motion():
-    """
-    Returns motion as True for ~1 second
-    """
-    GPIO.setup(PIR_MOTION_PIN, GPIO.IN)
-    motion = GPIO.input(PIR_MOTION_PIN)
-    return motion
-
 def led_on():    
     GPIO.setup(LED_PIN, GPIO.OUT)
     GPIO.output(LED_PIN, GPIO.LOW) # Turn on LED
-
 
 def led_off():
     GPIO.setup(LED_PIN, GPIO.OUT)

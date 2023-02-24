@@ -19,16 +19,13 @@ def main():
         c += 1
 
     c = 0
-    print("The terminal should display humidity, temp and motion for 20 seconds")
-    print("and the LED should blink")
+    print("The terminal should display humidity, temp and blinking LED for 20 seconds")
     while c < 20:
         led_on() if c%2==0 else led_off()
         print("=====================")
         print(f"Time: {c+1} seconds")
         print(f"Temperature: {read_sensor_temperature()}C")
         print(f"Humidity: {read_sensor_humidity()}%")
-        string = "DETECTED!" if read_sensor_motion() else "Nothing..."
-        print(f"Motion: {string}")
         c += 1
         sleep(1)
     return 0

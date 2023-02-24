@@ -14,7 +14,6 @@ List of available commands:
 
     read_sensor_temperature()
     read_sensor_humidity()
-    read_sensor_motion()
 '''
 
 def main():
