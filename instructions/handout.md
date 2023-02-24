@@ -87,6 +87,9 @@ When you are done, start the program and test it to see if the LED turns on if i
 
 ## Task Bonus: To the great beyond
 
-make the led blink instead of simply turning it on if humidity is too high
+Congratulations!
 
-You have reached the finish line! Now ask your guide what to do. For me, the document, I can't continue further. So I guess this is goodbye... Goodbye!
+You have successfully built a sauna detector! Now ask your guide what to do, or if you want a final task with a challange: Make the LED lamp **BLINK** if the room is too humid or warm, instead of only turning the lamp on.
+You have learned everything you need to make it happen, I believe in you!
+
+If you are done then you have reached the finish line! Now ask your guide what to do. For me, the document, I can't continue further. So I guess this is goodbye... Goodbye!
