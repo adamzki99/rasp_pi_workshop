@@ -1,16 +1,22 @@
 #!/bin/sh
-sudo apt install git
-sudo apt full-upgrade
-sudo apt install code
-sudo apt install python3
-sudo apt-get install python3-dev python3-pip
-sudo python3 -m pip install --upgrade pip setuptools wheel
-sudo pip3 install --install-option="--force-pi" Adafruit_DHT
-sudo pip3 install adafruit-circuitpython-lis3dh
-sudo pip3 install adafruit-circuitpython-dht
-python3 -m pip install -U --user pip gpiod
-sudo apt install libgpiod2
-sudo apt autoremove
+apt-get update && apt-get install -y \
+    git \
+    code \
+    python3 \
+    python3-dev \
+    python3-pip \
+    libgpiod2
+
+apt full-upgrade
+apt autoremove
+
+pip3 install --upgrade --user pip \
+    setuptools \
+    wheel \
+    gpiod \
+    adafruit-circuitpython-lis3dh \
+    adafruit-circuitpython-dht
+
 echo "-----------------------------------------------"
 echo "----------- Everything is set setup -----------"
 echo "-----------------------------------------------"
