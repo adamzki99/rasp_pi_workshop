@@ -19,6 +19,12 @@ def connect():
         except RuntimeError as error:
             print("Could not establish a connection to the Raspberry Pi")
 
+_count = 0
+def count():
+    global _count
+    _count += 1
+    return _count
+
 def read_sensor_temperature():
     """
     Returns the temperature as celsius

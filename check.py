@@ -5,8 +5,8 @@ from __motor_controll__ import *
 def main():
     print("Testing workshop")
     c = 0
-    while c <= 3:
-        c += 1
+    while c < 3:
+        c = count()
         print(c)
 
     c = 0
