@@ -4,8 +4,8 @@
 ### From 7 April 2022
 - [ ] Two seperate scripts, one for "apt install"-stuff and one for "pip3 install"-stuff
 - [ ] Update and fix all errors in the wiring schematic
-- [ ] The current library for the temp/humidity sensor do not work, this needs to be chaged and tested that it works with the Raspberry Pi 4
-- [ ] Better instructions: Add that there is a wiring schematic for the LED and sensor, as well as instructions on how to run the python code
+- [x] The current library for the temp/humidity sensor do not work, this needs to be chaged and tested that it works with the Raspberry Pi 4
+- [x] Better instructions: Add that there is a wiring schematic for the LED and sensor, as well as instructions on how to run the python code
 ### From 8 December 2022
 - [ ] New temp/humidity sensors with a integrated resistor: https://www.amazon.se/AZDelivery-Temperatursensor-Fuktgivare-Kretskort-kompatibel/dp/B078SVZB1X/ref=sr_1_7?crid=2DRKBQSXON1U6&keywords=DHT22&qid=1649316053&sprefix=dht22%2Caps%2C87&sr=8-7
 
