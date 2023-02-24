@@ -2,15 +2,6 @@
 
 ## Introduction
 
-First we are going to command the computer to recognize the world through the Terminal.
-Secondly we will make the computer say your name(s).
-Thirdly we will make the computer count (and in seconds)
-Fourthly we will have the computer turn on a LED lamp
-5 we will make the LED lamp blink
-6 we will read the humidity/temperature sensor
-7 we will control the LED lamp based on humidity
-Bonus: Make the LED blink if humidity is to high
-
 Welcome to the Raspberry Pi Workshop!
 Today you will learn how to program a small computer to detect the room's humidity and make a light turn on if the humidity is too high.
 There will be a total of 7 tasks for you follow and complete for this workshop.
