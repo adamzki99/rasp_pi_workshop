@@ -1,6 +1,5 @@
 import RPi.GPIO as GPIO
-import adafruit_dht # Importing a library used for the DHT22 which is the same as our AM2302 
-#import botbook_mcp3002 as mcp # For MQ-2 smoke sensor
+import adafruit_dht  # DHT22 library can be used for AM2302
 
 LED_PIN = 21
 AM2302_PIN = 2
@@ -9,6 +8,9 @@ DHT_SENSOR = adafruit_dht.DHT22(AM2302_PIN)
 
 GPIO.setwarnings(False)
 
+INVALID_VALUE = -1
+
+
 def connect():
     while True:
         try:
@@ -16,29 +18,35 @@ def connect():
             GPIO.setwarnings(False)
             break
 
-        except RuntimeError as error:
+        except RuntimeError:
             print("Could not establish a connection to the Raspberry Pi")
 
+
 _count = 0
+
+
 def count():
     global _count
     _count += 1
     return _count
+
 
 def read_sensor_temperature():
     """
     Returns the temperature as celsius
     """
     temperature = 0
-    
+
     try:
         temperature = DHT_SENSOR.temperature
-    except:
-        temperature = -1
-    if temperature == None:
-        temperature = -1
-    
+    except Exception:
+        return INVALID_VALUE
+
+    if temperature is None:
+        return INVALID_VALUE
+
     return temperature
+
 
 def read_sensor_humidity():
     """
@@ -48,18 +56,20 @@ def read_sensor_humidity():
 
     try:
         humidity = DHT_SENSOR.humidity
-    except:
-        humidity = -1
-    if humidity == None:
-        humidity = -1
-    
+    except (RuntimeError, Exception):
+        return INVALID_VALUE
+
+    if humidity is None:
+        return INVALID_VALUE
+
     return humidity
 
-def led_on():    
+
+def led_on():
     GPIO.setup(LED_PIN, GPIO.OUT)
-    GPIO.output(LED_PIN, GPIO.LOW) # Turn on LED
+    GPIO.output(LED_PIN, GPIO.LOW)  # Turn on LED
+
 
 def led_off():
     GPIO.setup(LED_PIN, GPIO.OUT)
-    GPIO.output(LED_PIN, GPIO.HIGH) # Turn off LED
-    
+    GPIO.output(LED_PIN, GPIO.HIGH)  # Turn off LED
