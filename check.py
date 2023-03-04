@@ -1,34 +1,36 @@
 from time import sleep
-from __init__ import *
-from __motor_controll__ import *
+from  __init__ import connect, count, led_off, led_on, read_sensor_humidity, read_sensor_temperature
+
 
 def main():
-    print("Testing workshop")
-    c = 0
-    while c < 3:
+    print("Step 1/3: Count and print")
+    for _ in range(3):
         c = count()
         print(c)
+        sleep(1)
 
-    c = 0
-    print("The LED lamp should blink for 5 seconds")
-    while c < 5:
+    print("\nStep 2/3: LED blinking for 5 seconds")
+    for _ in range(5):
         led_on()
         sleep(.5)
         led_off()
         sleep(.5)
-        c += 1
 
-    c = 0
-    print("The terminal should display humidity, temp and blinking LED for 20 seconds")
-    while c < 20:
-        led_on() if c%2==0 else led_off()
-        print("=====================")
-        print(f"Time: {c+1} seconds")
-        print(f"Temperature: {read_sensor_temperature()}C")
-        print(f"Humidity: {read_sensor_humidity()}%")
-        c += 1
+    print("\nStep 3/3: Display humidity, temp and blinking LED for 10 seconds")
+    for i in range(10):
+        is_even = i % 2 == 0
+        led_on() if is_even else led_off()
+        msg = (
+            "=====================\n"
+            f"Time: {i+1} seconds\n"
+            f"Temperature: {read_sensor_temperature()}C\n"
+            f"Humidity: {read_sensor_humidity()}%\n"
+        )
+        print(msg)
         sleep(1)
     return 0
+
+
 if __name__ == "__main__":
     connect()
     main()
