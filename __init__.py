@@ -1,8 +1,9 @@
 import RPi.GPIO as GPIO
 import adafruit_dht  # DHT22 library can be used for AM2302
+from microcontroller import Pin
 
 LED_PIN = 21
-AM2302_PIN = 2
+AM2302_PIN = Pin(2)
 PIR_MOTION_PIN = 8
 DHT_SENSOR = adafruit_dht.DHT22(AM2302_PIN)
 
