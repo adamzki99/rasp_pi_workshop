@@ -15,7 +15,7 @@ pip3 install --upgrade --user pip \
     wheel \
     gpiod \
     adafruit-circuitpython-lis3dh \
-    adafruit-circuitpython-dht
+    adafruit-circuitpython-dht --break-system-packages
 
 echo "-----------------------------------------------"
 echo "----------- Everything is set setup -----------"
